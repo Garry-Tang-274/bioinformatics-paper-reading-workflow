@@ -63,12 +63,16 @@ bioinformatics-paper-reading-workflow/
 
 `prompts` stores reusable analysis instructions, `templates` stores report and presentation skeletons, `checklists` stores methodological audit lists, and `examples` stores demonstrations that do not depend on copyrighted paper content.
 
+新增的 `checklists/claim-and-baseline-audit.md` 专门用于核查性能提升百分比、基线公平性、预训练数据重叠、调参预算和作者主张边界。
+
+The new `checklists/claim-and-baseline-audit.md` specifically audits performance-improvement percentages, baseline fairness, pretraining-data overlap, tuning budgets, and the boundaries of author claims.
+
 ## 最小使用方法
 ## Minimal Usage
 
-选择一篇论文，先填写 `templates/paper-report-template.md` 的元信息和研究问题，再依次使用三个 prompt，最后完成数据泄漏与复现性清单。
+选择一篇论文，先填写 `templates/paper-report-template.md` 的元信息和研究问题，再依次使用三个 prompt，最后完成数据泄漏、主张与基线公平性、复现性清单。
 
-Choose a paper, first complete the metadata and research-question sections in `templates/paper-report-template.md`, then use the three prompts in sequence, and finally complete the leakage and reproducibility checklists.
+Choose a paper, first complete the metadata and research-question sections in `templates/paper-report-template.md`, then use the three prompts in sequence, and finally complete the leakage, claim-and-baseline fairness, and reproducibility checklists.
 
 输出内容应引用 DOI、PubMed、期刊页面、代码仓库或数据集页面，而不是上传论文全文。
 
