@@ -1,50 +1,75 @@
 # 生物信息学论文精读与汇报工作流
 # Bioinformatics Paper Reading and Presentation Workflow
 
-这是一个面向生物信息学学习、科研讨论和组会汇报的可复用工作流。它将论文阅读拆分为背景、问题、数据、方法、结果、局限、复现性和项目启发，并提供严格对应的中英双语模板。
+![Status](https://img.shields.io/badge/status-active-2f81f7)
+![Scope](https://img.shields.io/badge/scope-methodological%20audit-8957e5)
+![Language](https://img.shields.io/badge/docs-bilingual-d8aa56)
+![License](https://img.shields.io/badge/license-MIT-3fb950)
 
-This is a reusable workflow for bioinformatics study, research discussion, and journal-club presentation. It separates paper reading into background, question, data, methods, results, limitations, reproducibility, and project implications, and provides strictly corresponding Chinese-English templates.
+这是一个面向生物信息学学习、科研讨论和组会汇报的可复用工作流。它把论文阅读拆分为研究问题、数据、方法、证据、局限、复现性与项目启发，并明确区分作者结论、实验事实和读者推断。
 
-本仓库不收录受版权保护的论文全文或高清图表。示例只使用原创概括、合成数据和可公开引用的书目信息。
+This is a reusable workflow for bioinformatics study, research discussion, and journal-club presentation. It separates paper reading into research questions, data, methods, evidence, limitations, reproducibility, and project implications while distinguishing author claims, observed results, and reader inference.
 
-This repository does not include copyrighted full papers or high-resolution figures. Examples use only original summaries, synthetic data, and openly citable bibliographic information.
+> **一分钟使用方法：** 填写报告模板，依次运行定位、逐图分析和批判性审计提示词，最后完成数据泄漏、基线公平性、复现准备与复现性清单。
+>
+> **One-minute workflow:** Fill in the report template, run the orientation, figure-analysis, and critical-audit prompts in order, then complete the leakage, baseline-fairness, reproduction-readiness, and reproducibility checklists.
 
-## 适用场景
-## Intended Uses
+[报告模板](templates/) · [分析提示词](prompts/) · [审计清单](checklists/) · [复现前检查](checklists/reproduction-readiness.md) · [示例](examples/) · [个人主页](https://garry-tang-274.github.io)
 
-工作流适合精读方法论文、数据库论文、基准测试、机器学习模型、单细胞研究和多组学研究，也可用于生成 Word 报告或简洁的组会幻灯片提纲。
-
-The workflow is suitable for methods papers, database papers, benchmarks, machine-learning models, single-cell studies, and multi-omics research, and it can also generate outlines for Word reports or concise journal-club slides.
+[Report templates](templates/) · [Analysis prompts](prompts/) · [Audit checklists](checklists/) · [Reproduction readiness](checklists/reproduction-readiness.md) · [Examples](examples/) · [Portfolio](https://garry-tang-274.github.io)
 
 ## 核心原则
 ## Core Principles
 
-先解释作者解决的生物学问题，再解释模型；先核对数据来源和划分，再讨论指标；把作者结论、证据和自己的推断明确分开。
+先解释作者解决的生物学问题，再解释模型；先核对数据来源和划分，再讨论指标；把作者结论、直接证据与自己的推断明确分开。
 
-Explain the biological question before the model; verify data sources and splits before discussing metrics; clearly separate the authors’ conclusions, supporting evidence, and your own inference.
+Explain the biological question before the model; verify data sources and splits before discussing metrics; clearly separate author conclusions, direct evidence, and your own inference.
 
-任何性能数字都应同时记录任务定义、比较基线、测试集组成、统计不确定性和潜在泄漏路径。
+任何性能数字都应同时记录任务定义、比较基线、测试集组成、统计不确定性、调参预算和潜在泄漏路径。
 
-Every performance number should be recorded together with the task definition, comparison baseline, test-set composition, statistical uncertainty, and potential leakage paths.
+Every performance number should be recorded together with the task definition, comparison baseline, test-set composition, statistical uncertainty, tuning budget, and potential leakage paths.
 
 ## 推荐流程
 ## Recommended Workflow
 
-第一遍在十五分钟内完成定位：研究问题、主要数据、核心方法、最重要结果和作者声称的贡献。
+### 1. 快速定位
+### 1. Orientation
 
-Use the first fifteen minutes for orientation: identify the research question, main data, core method, most important result, and claimed contribution.
+在十五分钟内识别研究问题、主要数据、核心方法、最重要结果和作者声称的贡献。
 
-第二遍建立结构化证据表，逐图核对输入、对照、指标、误差线和消融实验。
+Within fifteen minutes, identify the research question, main data, core method, most important result, and claimed contribution.
 
-Use the second pass to build a structured evidence table and inspect each figure for inputs, controls, metrics, error bars, and ablation studies.
+### 2. 建立证据表
+### 2. Build an Evidence Table
 
-第三遍进行批判性审计，重点检查数据泄漏、负样本、批次效应、分布外泛化、统计功效和复现条件。
+逐图核对输入、对照、指标、误差线、消融实验和结果适用范围。
 
-Use the third pass for critical auditing, focusing on data leakage, negative sampling, batch effects, out-of-distribution generalization, statistical power, and reproduction conditions.
+Inspect each figure for inputs, controls, metrics, error bars, ablations, and the valid scope of the result.
 
-最后将信息压缩为一页结论摘要、完整精读报告和四至八页组会结构。
+### 3. 批判性审计
+### 3. Critical Audit
 
-Finally compress the information into a one-page conclusion summary, a full reading report, and a four-to-eight-slide journal-club structure.
+重点检查数据泄漏、负样本、批次效应、分布外泛化、统计功效、预训练数据重叠和复现条件。
+
+Audit data leakage, negative sampling, batch effects, out-of-distribution generalization, statistical power, pretraining-data overlap, and reproduction conditions.
+
+### 4. 压缩输出或进入复现
+### 4. Compress the Output or Start Reproduction
+
+仅用于汇报时，将信息整理为一页结论摘要、完整精读报告和四至八页组会结构；准备复现时，先冻结论文/代码版本、数据划分、基线、指标、环境和成功标准。
+
+For presentation, compress the analysis into a one-page conclusion summary, a full reading report, and a four-to-eight-slide journal-club structure. Before reproduction, freeze the paper/code version, data split, baselines, metrics, environment, and success criteria.
+
+## 最新方法学补充
+## Latest Methodological Additions
+
+[`checklists/claim-and-baseline-audit.md`](checklists/claim-and-baseline-audit.md) 专门核查“提升百分比”“最佳模型”“泛化能力”和“优于基线”等主张。
+
+[`checklists/claim-and-baseline-audit.md`](checklists/claim-and-baseline-audit.md) specifically audits claims about improvement percentages, best models, generalization, and superiority over baselines.
+
+[`checklists/reproduction-readiness.md`](checklists/reproduction-readiness.md) 用于真正开始复现前冻结目标、论文与实现版本、数据划分、基线、指标、环境和成功标准，避免“代码已经跑了但复现对象一直在变”。
+
+[`checklists/reproduction-readiness.md`](checklists/reproduction-readiness.md) freezes the target, paper and implementation versions, data splits, baselines, metrics, environment, and success criteria before reproduction begins, preventing the target from drifting after code is already running.
 
 ## 仓库结构
 ## Repository Structure
@@ -61,33 +86,22 @@ bioinformatics-paper-reading-workflow/
 
 `prompts` 保存可复用分析指令，`templates` 保存报告与汇报骨架，`checklists` 保存方法学审计清单，`examples` 保存不依赖论文版权内容的演示。
 
-`prompts` stores reusable analysis instructions, `templates` stores report and presentation skeletons, `checklists` stores methodological audit lists, and `examples` stores demonstrations that do not depend on copyrighted paper content.
+`prompts` stores reusable analysis instructions, `templates` stores report and presentation skeletons, `checklists` stores methodological audits, and `examples` stores demonstrations that do not depend on copyrighted paper content.
 
-新增的 `checklists/claim-and-baseline-audit.md` 专门用于核查性能提升百分比、基线公平性、预训练数据重叠、调参预算和作者主张边界。
+## 使用边界
+## Boundaries
 
-The new `checklists/claim-and-baseline-audit.md` specifically audits performance-improvement percentages, baseline fairness, pretraining-data overlap, tuning budgets, and the boundaries of author claims.
+本仓库不收录受版权保护的论文全文或高清图表。示例只使用原创概括、合成数据和可公开引用的书目信息。
 
-## 最小使用方法
-## Minimal Usage
+This repository does not include copyrighted full papers or high-resolution figures. Examples use original summaries, synthetic data, and openly citable bibliographic information only.
 
-选择一篇论文，先填写 `templates/paper-report-template.md` 的元信息和研究问题，再依次使用三个 prompt，最后完成数据泄漏、主张与基线公平性、复现性清单。
+工作流不能替代领域专家判断，也不能仅凭摘要评估实验质量。涉及关键图、表格或补充材料时，必须查看原始内容。
 
-Choose a paper, first complete the metadata and research-question sections in `templates/paper-report-template.md`, then use the three prompts in sequence, and finally complete the leakage, claim-and-baseline fairness, and reproducibility checklists.
+The workflow cannot replace domain-expert judgment and cannot evaluate experimental quality from an abstract alone. Key figures, tables, and supplementary materials must be inspected directly.
 
-输出内容应引用 DOI、PubMed、期刊页面、代码仓库或数据集页面，而不是上传论文全文。
+自动生成的术语解释、数学公式和统计结论必须回到论文、代码或权威资料核验。
 
-Outputs should cite DOI, PubMed, journal pages, code repositories, or dataset pages rather than uploading the full paper.
-
-## 当前边界
-## Current Boundaries
-
-工作流不能替代领域专家判断，也不能仅凭摘要评估实验质量。涉及关键图、表格或补充材料时，必须直接查看原始内容。
-
-The workflow cannot replace domain-expert judgment and cannot evaluate experimental quality from the abstract alone. Key figures, tables, and supplementary materials must be inspected directly.
-
-自动生成的术语解释、数学公式和统计结论必须回到原文、代码或权威资料核验。
-
-Automatically generated terminology explanations, equations, and statistical conclusions must be verified against the paper, code, or authoritative references.
+Automatically generated terminology explanations, equations, and statistical conclusions must be verified against the paper, code, or authoritative sources.
 
 ## 许可
 ## License
