@@ -10,13 +10,13 @@
 
 This is a reusable workflow for bioinformatics study, research discussion, and journal-club presentation. It separates paper reading into research questions, data, methods, evidence, limitations, reproducibility, and project implications while distinguishing author claims, observed results, and reader inference.
 
-> **一分钟使用方法：** 填写报告模板，依次运行定位、逐图分析和批判性审计提示词，最后完成数据泄漏、基线公平性与复现性清单。
+> **一分钟使用方法：** 填写报告模板，依次运行定位、逐图分析和批判性审计提示词，最后完成数据泄漏、基线公平性、复现准备与复现性清单。
 >
-> **One-minute workflow:** Fill in the report template, run the orientation, figure-analysis, and critical-audit prompts in order, then complete the leakage, baseline-fairness, and reproducibility checklists.
+> **One-minute workflow:** Fill in the report template, run the orientation, figure-analysis, and critical-audit prompts in order, then complete the leakage, baseline-fairness, reproduction-readiness, and reproducibility checklists.
 
-[报告模板](templates/) · [分析提示词](prompts/) · [审计清单](checklists/) · [示例](examples/) · [个人主页](https://garry-tang-274.github.io)
+[报告模板](templates/) · [分析提示词](prompts/) · [审计清单](checklists/) · [复现前检查](checklists/reproduction-readiness.md) · [示例](examples/) · [个人主页](https://garry-tang-274.github.io)
 
-[Report templates](templates/) · [Analysis prompts](prompts/) · [Audit checklists](checklists/) · [Examples](examples/) · [Portfolio](https://garry-tang-274.github.io)
+[Report templates](templates/) · [Analysis prompts](prompts/) · [Audit checklists](checklists/) · [Reproduction readiness](checklists/reproduction-readiness.md) · [Examples](examples/) · [Portfolio](https://garry-tang-274.github.io)
 
 ## 核心原则
 ## Core Principles
@@ -53,23 +53,23 @@ Inspect each figure for inputs, controls, metrics, error bars, ablations, and th
 
 Audit data leakage, negative sampling, batch effects, out-of-distribution generalization, statistical power, pretraining-data overlap, and reproduction conditions.
 
-### 4. 压缩输出
-### 4. Compress the Output
+### 4. 压缩输出或进入复现
+### 4. Compress the Output or Start Reproduction
 
-将信息整理为一页结论摘要、完整精读报告和四至八页组会结构。
+仅用于汇报时，将信息整理为一页结论摘要、完整精读报告和四至八页组会结构；准备复现时，先冻结论文/代码版本、数据划分、基线、指标、环境和成功标准。
 
-Compress the analysis into a one-page conclusion summary, a full reading report, and a four-to-eight-slide journal-club structure.
+For presentation, compress the analysis into a one-page conclusion summary, a full reading report, and a four-to-eight-slide journal-club structure. Before reproduction, freeze the paper/code version, data split, baselines, metrics, environment, and success criteria.
 
 ## 最新方法学补充
-## Latest Methodological Addition
+## Latest Methodological Additions
 
 [`checklists/claim-and-baseline-audit.md`](checklists/claim-and-baseline-audit.md) 专门核查“提升百分比”“最佳模型”“泛化能力”和“优于基线”等主张。
 
 [`checklists/claim-and-baseline-audit.md`](checklists/claim-and-baseline-audit.md) specifically audits claims about improvement percentages, best models, generalization, and superiority over baselines.
 
-它要求确认比较对象、数据划分、训练与调参预算、预训练数据重叠、指标与不确定性，并将无法定位的证据登记为待核验事项。
+[`checklists/reproduction-readiness.md`](checklists/reproduction-readiness.md) 用于真正开始复现前冻结目标、论文与实现版本、数据划分、基线、指标、环境和成功标准，避免“代码已经跑了但复现对象一直在变”。
 
-It requires checking comparison targets, data splits, training and tuning budgets, pretraining-data overlap, metrics, and uncertainty, while registering unresolved evidence explicitly.
+[`checklists/reproduction-readiness.md`](checklists/reproduction-readiness.md) freezes the target, paper and implementation versions, data splits, baselines, metrics, environment, and success criteria before reproduction begins, preventing the target from drifting after code is already running.
 
 ## 仓库结构
 ## Repository Structure
