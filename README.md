@@ -71,6 +71,13 @@ For presentation, compress the analysis into a one-page conclusion summary, a fu
 
 [`checklists/reproduction-readiness.md`](checklists/reproduction-readiness.md) freezes the target, paper and implementation versions, data splits, baselines, metrics, environment, and success criteria before reproduction begins, preventing the target from drifting after code is already running.
 
+### 测量与来源核对
+### Measurement and Provenance
+
+先使用[测量来源清单](checklists/measurement-provenance.md)核对标签、构建、单位和样本背景，再填写[证据台账](templates/measurement-evidence.csv)。尤其适合数据库记录、实验读数和模型分数混在同一分析中的情况。
+
+Use the [measurement-provenance checklist](checklists/measurement-provenance.md) and [evidence ledger](templates/measurement-evidence.csv) before comparing database labels, experimental readouts and model scores in one analysis.
+
 ## 仓库结构
 ## Repository Structure
 

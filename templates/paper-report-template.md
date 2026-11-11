@@ -25,14 +25,14 @@ Explain the study subject, limitations of existing methods, the authors’ hypot
 ## 数据与队列
 ## Data and Cohorts
 
-| 项目 / Item | 内容 / Details |
-|---|---|
-| 数据来源 / Data source |  |
-| 样本单位 / Sampling unit |  |
-| 样本量 / Sample size |  |
-| 标签定义 / Label definition |  |
-| 划分策略 / Split strategy |  |
-| 泄漏检查 / Leakage check |  |
+| 项目 / Item                 | 内容 / Details |
+| --------------------------- | -------------- |
+| 数据来源 / Data source      |                |
+| 样本单位 / Sampling unit    |                |
+| 样本量 / Sample size        |                |
+| 标签定义 / Label definition |                |
+| 划分策略 / Split strategy   |                |
+| 泄漏检查 / Leakage check    |                |
 
 ## 方法
 ## Methods
@@ -45,8 +45,8 @@ Describe inputs, preprocessing, features or representations, model, training obj
 ## Main Results
 
 | 结论 / Claim | 证据 / Evidence | 指标 / Metric | 对照 / Control | 可信度 / Confidence |
-|---|---|---|---|---|
-|  |  |  |  |  |
+| ------------ | --------------- | ------------- | -------------- | ------------------- |
+|              |                 |               |                |                     |
 
 ## 局限与风险
 ## Limitations and Risks
